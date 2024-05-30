@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameZone</title>
+    <link rel="stylesheet" href="tt.css">
+</head>
+<body>
+    <header>
+    <h1>GameZone</h1>
+    <nav>
+        <ul>
+            <li><a href="#home">Início</a></li>
+            <li><a href="#games">Jogos</a></li>
+            <li><a href="#shop">Loja</a></li>
+            <li><a href="tt1.html">login</a></li>
+            <li id="cart-icon"><a href="#cart"><img src="cart-icon.png" alt="Carrinho" id="carrinhoTopo"> <span id="cart-count">0</span></a></li>
+        </ul>
+    </nav>
+     <h1>Pesquisa Avançada</h1>
+    <form id="advancedSearchForm">
+        <input type="text" id="keyword" placeholder="Palavra-chave">
+        <select id="category">
+            <option value="">Todas as categorias</option>
+            <option value="eletronicos">Eletrônicos</option>
+            <option value="roupas">Roupas</option>
+            <option value="livros">Livros</option>
+        </select>
+        <input type="number" id="minPrice" placeholder="Preço Mínimo">
+        <input type="number" id="maxPrice" placeholder="Preço Máximo">
+        <button type="submit">Pesquisar</button>
+    </form>
+
+    <div id="searchResults">
+        <!-- Aqui serão exibidos os resultados da pesquisa -->
+    </div>
+
+</header>
+<div class="carousel-container">
+        <div class="carousel-slide">
+            <img src="user.png" alt="Imagem 1">
+            <img src="user.png" alt="Imagem 2">
+            <img src="user.png" alt="Imagem 3">
+            <!-- Adicione mais imagens conforme necessário -->
+        </div>
+        <button id="prevBtn">&#10094;</button>
+        <button id="nextBtn">&#10095;</button>
+    </div>
+
+<section id="cart">
+    <h2>Carrinho de Compras</h2>
+    <div id="cart-items">
+        <!-- Itens do carrinho serão adicionados aqui dinamicamente -->
+    </div>
+</section>
+    <section id="home">
+    <div class="banner">
+        <h2>Últimos Lançamentos</h2>
+        <p>Confira os jogos mais recentes que chegaram ao mercado.</p>
+        <!-- Adicione imagens e links para os últimos lançamentos -->
+    </div>
+    <div class="highlight">
+        <h2>Jogos em Destaque</h2>
+        <p>Veja os jogos mais populares do momento.</p>
+        <!-- Adicione imagens e links para os jogos em destaque -->
+    </div>
+    <div class="news">
+        <h2>Notícias</h2>
+        <p>Fique por dentro das últimas novidades do mundo dos jogos.</p>
+        <!-- Adicione notícias e links para artigos completos -->
+    </div>
+</section>
+
+<section id="games">
+    <h2>Lista de Jogos</h2>
+    <!-- Adicione uma tabela ou lista de jogos com imagens e links -->
+</section>
+
+<section id="shop">
+    <h2>Loja Online</h2>
+    <p>Compre os melhores jogos com os melhores preços.</p>
+    <!-- Adicione produtos e links para compra -->
+</section>
+
+<section id="events">
+    <h2>Calendário de Eventos</h2>
+    <p>Confira os próximos eventos relacionados a jogos.</p>
+    <!-- Adicione uma lista de eventos com datas e descrições -->
+</section>
+<section id="shop">
+    <h2>Loja Online</h2>
+    <div class="product">
+        <img src="game1.jpg" alt="Nome do Jogo 1">
+        <h3>Nome do Jogo 1</h3>
+        <p class="price">R$ 99,99</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae ligula sit amet ex tristique tincidunt.</p>
+        <a href="#" class="buy-button" id="carrinho">Comprar</a>
+    </div>
+    <div class="product">
+        <img src="game2.jpg" alt="Nome do Jogo 2">
+        <h3>Nome do Jogo 2</h3>
+        <p class="price">R$ 79,99</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae ligula sit amet ex tristique tincidunt.</p>
+        <a href="#" class="buy-button" id="carrinho">Comprar</a>
+    </div>
+    <!-- Adicione mais produtos conforme necessário -->
+</section>
+<div class="cookie-banner" id="cookieBanner">
+        <div class="cookie-content">
+            <div class="cookie-message">
+                Este site utiliza cookies para garantir a melhor experiência possível para você. <a href="#">Saiba mais</a>
+            </div>
+            <div class="cookie-buttons">
+                <button onclick="acceptCookies()">Aceitar</button>
+                <button onclick="rejectCookies()">Recusar</button>
+            </div>
+        </div>
+    </div>
+    <h1>Conteúdo do Site</h1>
+    <!-- Aqui vai o conteúdo do seu site -->
+
+
+
+
+
+
+    <script type="text/javascript">document.addEventListener("DOMContentLoaded", function() {
+    var carrinhoTopo = document.getElementById("carrinhoTopo");
+    var carrinho = document.getElementById("carrinho");
+
+    // Função que será executada ao clicar em qualquer um dos botões
+    function handleClick() {
+        // Sua lógica para abrir o carrinho aqui
+        console.log("Carrinho aberto!");
+    }
+
+    // Vinculando a função de clique aos botões
+    carrinhoTopo.addEventListener("click", handleClick);
+    carrinho.addEventListener("click", handleClick);
+});</script>
+
+
+
+
+    <script>
+        function setCookie() {
+            document.cookie = "username=John Doe; expires=Thu, 18 Dec 2025 12:00:00 UTC; path=/";
+            alert("Cookie definido!");
+        }
+
+        function getCookie() {
+            var cookieValue = document.cookie.replace(/(?:(?:^|.*;\s*)username\s*=\s*([^;]*).*$)|^.*$/, "$1");
+            if (cookieValue) {
+                alert("Valor do Cookie: " + cookieValue);
+            } else {
+                alert("Cookie não encontrado.");
+            }
+        }
+
+        function deleteCookie() {
+            document.cookie = "username=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+            alert("Cookie excluído!");
+        }
+    </script>
+
+
+<script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var cartCount = 0;
+            var cartCountElement = document.getElementById('cart-count');
+
+            // Função para adicionar item ao carrinho
+            function addItemToCart() {
+                cartCount++;
+                cartCountElement.textContent = cartCount;
+            }
+
+            // Adicionar evento de clique ao ícone do carrinho
+            var cartIcon = document.getElementById('cart-icon');
+            cartIcon.addEventListener('click', function(event) {
+                event.preventDefault();
+                addItemToCart();
+            });
+        });
+    </script>
+
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function() {
+    const carouselSlide = document.querySelector('.carousel-slide');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+
+    let counter = 0;
+
+    nextBtn.addEventListener('click', () => {
+        carouselSlide.style.transition = 'transform 0.4s ease-in-out';
+        counter++;
+        carouselSlide.style.transform = `translateX(${-counter * 100}%)`;
+    });
+
+    prevBtn.addEventListener('click', () => {
+        carouselSlide.style.transition = 'transform 0.4s ease-in-out';
+        counter--;
+        carouselSlide.style.transform = `translateX(${-counter * 100}%)`;
+    });
+});
+    </script>
+
+
+    <script type="text/javascript">document.addEventListener("DOMContentLoaded", function() {
+    var form = document.getElementById("advancedSearchForm");
+    var searchResults = document.getElementById("searchResults");
+
+    form.addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        var keyword = document.getElementById("keyword").value;
+        var category = document.getElementById("category").value;
+        var minPrice = document.getElementById("minPrice").value;
+        var maxPrice = document.getElementById("maxPrice").value;
+
+        // Aqui você pode enviar os dados da pesquisa para o servidor e obter os resultados
+        // Por enquanto, vamos apenas simular a exibição dos resultados na página
+        displaySearchResults(keyword, category, minPrice, maxPrice);
+    });
+
+    function displaySearchResults(keyword, category, minPrice, maxPrice) {
+        // Aqui você faria uma solicitação AJAX para o servidor com os parâmetros da pesquisa
+        // Em seguida, exibiria os resultados retornados no elemento "searchResults"
+        // Por enquanto, vamos apenas exibir uma mensagem simulando os resultados
+        var message = "Resultados da pesquisa:\n";
+        message += "Palavra-chave: " + keyword + "\n";
+        message += "Categoria: " + category + "\n";
+        message += "Preço Mínimo: " + minPrice + "\n";
+        message += "Preço Máximo: " + maxPrice + "\n";
+        searchResults.textContent = message;
+    }
+});</script>
+</body>
+</html>
